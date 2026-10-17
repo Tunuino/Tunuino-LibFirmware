@@ -1,17 +1,17 @@
 # Tunuino LibFirmware
 
-Biblioteca de firmware partilhado para o projeto Tunuino.
+Biblioteca de firmware partilhado utilizada pelo projeto Tunuino.
 
 ## Estado
 
-**Migração em preparação.** Este repositório ainda não contém a biblioteca funcional. Não alterar o submódulo do firmware principal até importar, adaptar e testar os ficheiros.
+A biblioteca foi importada e integrada no firmware principal através do submódulo `firmware/libfirmware`, fixado na revisão `d2e5b907763f8cc972a8ebb17bd9f8066b4f8843`.
 
-## Referência técnica
+Inclui definições de placas, interfaces CAN, componentes PT2001 e testes unitários com `ext/googletest`. Os workflows de testes Linux/macOS e Windows passaram para a revisão integrada.
 
-A versão atualmente utilizada pelo Tunuino encontra-se no submódulo `firmware/libfirmware`, fixado na revisão `dffa2426620039f6711def5a794c41c5dd03194f` de `rusefi/libfirmware`.
+## Validação
 
-A revisão inclui definições de placas, interfaces CAN, componentes PT2001 e o submódulo `ext/googletest`. As referências de inclusão e os caminhos dos projetos PT2001 terão de ser adaptados em conjunto.
+A compilação do firmware principal passou nos workflows de integração. A compatibilidade com o hardware real e a revisão de licenças dos componentes de terceiros continuam a exigir validação independente.
 
 ## Autoria e licenciamento
 
-A migração não transfere direitos de autor sobre código de terceiros. Antes da importação, verificar os avisos de copyright e licenças de cada componente; preservar as atribuições e condições aplicáveis. Renomear identificadores técnicos não altera esses direitos.
+Os direitos de autor e as licenças de componentes de terceiros mantêm-se aplicáveis aos respetivos ficheiros. A importação para a organização Tunuino não transfere a sua titularidade.
