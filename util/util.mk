@@ -1,3 +1,4 @@
+tunuino_LIB ?= $(if $(RUSEFI_LIB),$(RUSEFI_LIB),libfirmware)
 tunuino_LIB_INC += $(tunuino_LIB)/util/include $(tunuino_LIB)/util/include/tunuino/containers $(tunuino_LIB)/can $(tunuino_LIB)/board_id
 
 tunuino_LIB_CPP += \
@@ -21,3 +22,9 @@ tunuino_LIB_CPP_TEST += \
 	$(tunuino_LIB)/util/test/test_wraparound.cpp \
 	$(tunuino_LIB)/util/test/test_math.cpp \
 
+
+# Firmware build compatibility; Tunuino remains the canonical naming.
+RUSEFI_LIB_INC = $(tunuino_LIB_INC)
+RUSEFI_LIB_C = $(tunuino_LIB_C)
+RUSEFI_LIB_CPP = $(tunuino_LIB_CPP)
+RUSEFI_LIB_CPP_TEST = $(tunuino_LIB_CPP_TEST)
