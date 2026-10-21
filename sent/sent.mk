@@ -1,3 +1,4 @@
+tunuino_LIB ?= $(if $(RUSEFI_LIB),$(RUSEFI_LIB),libfirmware)
 tunuino_LIB_INC += \
 	$(tunuino_LIB)/sent/include
 
